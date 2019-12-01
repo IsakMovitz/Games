@@ -1,5 +1,3 @@
-package Lab3;
-
 import java.net.*;
 import java.io.*;
 import java.util.*;
