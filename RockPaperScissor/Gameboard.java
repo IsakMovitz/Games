@@ -1,4 +1,3 @@
-package Lab3;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -10,9 +9,9 @@ import java.util.*;
 class Gameboard extends JPanel {
 
     private Icon[] icons = {
-            new ImageIcon("C://Users//Lil Moze//IdeaProjects//JavaLabbar//src//Lab3/rock.png"),
-            new ImageIcon("C://Users//Lil Moze//IdeaProjects//JavaLabbar//src//Lab3/paper.png"),
-            new ImageIcon("C://Users//Lil Moze//IdeaProjects//JavaLabbar//src//Lab3/scissors.png")
+            new ImageIcon("rock.png"),
+            new ImageIcon("paper.png"),
+            new ImageIcon("scissors.png")
     };
 
     private JButton[] buttons = new JButton[3];
