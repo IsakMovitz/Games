@@ -1,11 +1,10 @@
-package Lab2;
 import java.util.*;
 import java.util.Random;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Lab2_Femtonspelet{
+public class Femtonspelet{
     public static void main(String[] args) {
         Boardgame thegame = new Femtonspelet();
         ViewControl view = new ViewControl(thegame, 4);
