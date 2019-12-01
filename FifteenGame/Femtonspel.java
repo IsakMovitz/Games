@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Femtonspelet{
+public class Femtonspel{
     public static void main(String[] args) {
         Boardgame thegame = new Femtonspelet();
         ViewControl view = new ViewControl(thegame, 4);
