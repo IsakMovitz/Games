@@ -12,21 +12,21 @@ public class Femtonspel{
 }
 
 interface Boardgame {
-    public boolean move(int i, int j); //ger true om draget gick bra, annars false
-    public String getStatus(int i, int j); // returnera innehåll på ruta (i,j)
-    public String getMessage(); // returnera OK (eller liknande) eller felmeddelande avseende senaste drag
+    public boolean move(int i, int j); 
+    public String getStatus(int i, int j); 
+    public String getMessage(); 
 }
 
 class Femtonspelet implements Boardgame {
 
     private String currentMessage;
-    private String[][] board = new String[4][4];   // spelplanen
-    private static String[] numberList = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", ""};  // Nummer vi fyller den med
-    private int i_empty, j_empty;                         //index till den tomma rutan
+    private String[][] board = new String[4][4];  
+    private static String[] numberList = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", ""};  
+    private int i_empty, j_empty;                        
     //int the_move;
 
     Femtonspelet() {
-        i_empty = 3;                            // Initierar spelplanen
+        i_empty = 3;                        
         j_empty = 3;
 
         int numberList_index = 0;
@@ -38,7 +38,7 @@ class Femtonspelet implements Boardgame {
         }
 
         int counter = 0;
-        while (counter < 1000) {                       // Makes some random moves to shuffle
+        while (counter < 1000) {                      
             Random randomGenerator = new Random();
             int i = randomGenerator.nextInt(4);
             int j = randomGenerator.nextInt(4);
@@ -63,8 +63,8 @@ class Femtonspelet implements Boardgame {
                     i_empty = i;
                     j_empty = j;
 
-                    currentMessage = "OK"; // Löste det såhär for now.
-                    return true;    // Förstår inte hur jag ska komma åt det returnerade värdet från move i getMessage metoden utan att kalla på den igen.
+                    currentMessage = "OK";
+                    return true;  
                 }
             }
 
@@ -148,7 +148,7 @@ class ViewControl extends JFrame implements ActionListener {
     private Square[][] board;
     private JLabel mess = new JLabel();
 
-    ViewControl(Boardgame thegame, int n) {  // OK med fler parametrar om ni vill!
+    ViewControl(Boardgame thegame, int n) {
         size = n;
         game = thegame;
         board = new Square[size][size];
